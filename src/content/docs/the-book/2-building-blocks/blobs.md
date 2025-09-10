@@ -52,5 +52,5 @@ Hyperdrive does take this a step further, providing a lot of the functionality y
 Helpers such as [localdrive](https://docs.pears.com/helpers/localdrive) and [mirrordrive](https://docs.pears.com/helpers/mirrordrive) help make Hyperdrive even more powerful. With easy copying of data to a local folder, another drive, or between local folders.
 
 :::note
-Remember, if you're not interested having whole files managed for you and shareable between Peers, Hyperdrive is not the tool you need. Consider Hyperblobs.
+Remember, if you're not interested in having whole files managed for you and shareable between Peers, Hyperdrive is not the tool you need. Consider Hyperblobs.
 :::
