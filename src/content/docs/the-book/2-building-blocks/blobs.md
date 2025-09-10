@@ -20,7 +20,7 @@ await core.append(Buffer.from('I am a block of data')) // returns new length of 
 
 However, there are limits on how much data can be stored in a single block ([add reference]()).
 
-This brings us to chunking data. However, chunking brings the added complexity of managing multiple blocks.
+We could chunk the data into smaller blocks and store them in a Hypercore. However, this would require us to keep track of the chunks and their order.
 
 ## Enter Hyperblobs
 
@@ -43,7 +43,7 @@ This is a solid solution for "object storage" in **Pear**. It allows you to stor
 
 The final layer we have is files. What if I want to easily store and retrieve files? Files are just bigger Buffers, but with extra meta. I want to know the file name for example. For that we just need to store the `Blob ID` in a KV store or a database right?
 
-### Enter Hyperdrive
+## Enter Hyperdrive
 
 No rewards for guessing what this does. [Hyperdrive](https://docs.pears.com/building-blocks/hyperdrive) contains a KV store (aka [Hyperbee](/the-book/building-blocks/key-value-store)) with meta.
 
