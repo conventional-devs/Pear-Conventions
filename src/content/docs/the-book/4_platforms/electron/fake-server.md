@@ -1,3 +1,3 @@
 ---
-title: \"Server-side\" via Pear Worker
+title: Server-side via Pear Worker
 ---
