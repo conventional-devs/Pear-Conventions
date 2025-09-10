@@ -20,7 +20,7 @@ await core.append(Buffer.from('I am a block of data')) // returns new length of 
 
 However, there are limits on how much data can be stored in a single block ([add reference]()).
 
-Things brings us to chunking data. However, this brings the added complexity of managing multiple blocks.
+This brings us to chunking data. However, chunking brings the added complexity of managing multiple blocks.
 
 ## Enter Hyperblobs
 
