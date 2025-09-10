@@ -23,72 +23,19 @@ export default defineConfig({
         },
         {
           label: "1. Foundations",
-          items: [
-            {
-              label: "Finding Peers",
-              slug: "the-book/1-foundations/finding-peers",
-            },
-            {
-              label: "Key-Value Store",
-              slug: "the-book/1-foundations/key-value-store",
-            },
-            { label: "Storage", slug: "the-book/1-foundations/storage" },
-          ],
+          autogenerate: { directory: "the-book/1-foundations" },
         },
         {
           label: "2. Building Blocks",
-          items: [
-            { label: "Overview", slug: "the-book/2-building-blocks/overview" },
-            {
-              label: "Database and Schema",
-              slug: "the-book/2-building-blocks/db-and-schema",
-            },
-            {
-              label: "Multi-Writer",
-              slug: "the-book/2-building-blocks/multi-writer",
-            },
-            {
-              label: "Simplified RPC",
-              slug: "the-book/2-building-blocks/simplified-rpc",
-            },
-          ],
+          autogenerate: { directory: "the-book/2-building-blocks" },
         },
         {
           label: "3. Bringing It All Together",
-          items: [
-            {
-              label: "Overview",
-              slug: "the-book/3_bringing_it_all_together/overview",
-            },
-          ],
+          autogenerate: { directory: "the-book/3_bringing_it_all_together" },
         },
         {
           label: "4. Platforms",
-          items: [
-            {
-              label: "Bare Expo",
-              items: [
-                {
-                  label: "Pitfalls",
-                  slug: "the-book/4_platforms/bare-expo/pitfalls",
-                },
-              ],
-            },
-            {
-              label: "Electron",
-              items: [
-                {
-                  label: "Fake Server",
-                  slug: "the-book/4_platforms/electron/fake-server",
-                },
-                {
-                  label: "HTML and JS",
-                  slug: "the-book/4_platforms/electron/html-and-js",
-                },
-                { label: "React", slug: "the-book/4_platforms/electron/react" },
-              ],
-            },
-          ],
+          autogenerate: { directory: "the-book/4_platforms" },
         },
         {
           label: "Reference",
