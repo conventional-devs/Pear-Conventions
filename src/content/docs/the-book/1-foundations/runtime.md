@@ -4,7 +4,7 @@ title: Run, Build, Deploy
 
 ## Runtime
 
-Node, Pear, Bare
+Node, Pear (runs your code with Bare), Bare
 
 ## Package Management
 

@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import starlightThemeObsidian from "starlight-theme-obsidian";
 
 import vercel from "@astrojs/vercel";
 
@@ -8,6 +9,8 @@ import vercel from "@astrojs/vercel";
 export default defineConfig({
   integrations: [
     starlight({
+      plugins: [starlightThemeObsidian()],
+      customCss: ["./src/styles/global.css"],
       title: "Pear Conventions",
       social: [
         {
