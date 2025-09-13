@@ -88,6 +88,10 @@ blind.addCore(core1, autobase1.wakeupCapability.key)
 Synchronous can be slow, prefer asynchronous if your app is not short lived.
 :::
 
+:::tip
+Consider allowing your users to customise the Blind Peers used. They may not want to use the default ones for privacy reasons - such as location sharing.
+:::
+
 ### 3. [Blind Peering CLI](https://github.com/holepunchto/blind-peering-cli) - Your Application
 
 The `pear info pear://<app>` command outputs information about your Pear app; including the keys of the Core and Drive needed to share it.
