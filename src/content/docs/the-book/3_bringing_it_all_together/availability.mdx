@@ -2,6 +2,7 @@
 title: Availability and Seeding
 description: Making your data and Pear app available with Blind Peering
 ---
+import { Aside } from '@astrojs/starlight/components';
 
 Keeping your application available means two things in P2P:
 
@@ -28,17 +29,27 @@ So how do I keep my Direct Messages available without anyone online to seed them
 
 Blind Peer is as the name suggests, a Peer that doesn't see your data, just makes it available for others to download.
 
-It comes in two parts (three if you include the CLI for manually requesting Peering)
+It comes in two parts (three if you include the CLI for manually requesting Peering).
+1. Blind Peer Server - Handle peering requests
+2. Blind Peer Client - Request peering
 
 ### 1. [The Blind Peer](https://github.com/holepunchto/blind-peer)
 
 This is a CLI that you can run as a service.
 It listens to requests for Cores to be replicated.
 
+```sh
+npm i -g blind-peer
+
+blind-peer
+```
+
 :::note
 After startup, it will print out in the logs the hash you need to use for requests.
 :::
-
+:::warning
+Default max disk size to use is 100GB, lower with `blind-peer -m <size>`.
+:::
 
 ```toml
 [Unit]
@@ -55,6 +66,18 @@ Environment=PATH=/root/.nvm/versions/node/v22.18.0/bin:/usr/local/sbin:/usr/loca
 [Install]
 WantedBy=multi-user.target
 ```
+
+:::note
+Setting a `--trusted-peer` is not required unless you want to request peering via the Blind Peering CLI
+:::
+
+If you want to request peering via the CLI, you'll need to get your public key from the machine you intended to make the request from.
+
+```sh
+blind-peering identity
+```
+
+**This will return a public key**. For use when setting up the Blind Peer server above.
 
 ### 2. [Blind Peering Client](https://github.com/holepunchto/blind-peering) - Your Data
 
@@ -139,3 +162,8 @@ Seed the App drive:
 ```bash
 $ blind-peering seed --drive --blind-peer-key <blind-peer-key> <project key>
 ```
+
+<Aside type="tip" title="tldr;" icon="starlight">
+* Use `blind-peer` to make Hypercores available! Host a `blind-peer` on your own server(s) and add the key to your app.
+* Consider allowing your users to customise the Blind Peers used. They may not want to use the default ones for privacy reasons - such as location sharing.
+</Aside>
