@@ -2,6 +2,10 @@
 title: Finding Peers
 ---
 
+Peers are the heart of P2P. No servers, just pipes for sending data.
+
+![Hypercores](/visuals/server-vs-p2p.png)
+
 ## What is HyperDHT?
 
 HyperDHT is a distributed hash table (DHT) that powers Hyperswarm and is built on top of dht-rpc. It serves as a peer-to-peer networking layer designed to facilitate finding and connecting to peers using end-to-end encrypted connections. The key innovation is that peers are identified by public keys rather than IP addresses, allowing connections regardless of network location or when peers move between networks.
