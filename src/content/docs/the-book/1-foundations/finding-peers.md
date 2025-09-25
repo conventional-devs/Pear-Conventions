@@ -2,6 +2,12 @@
 title: Finding Peers
 ---
 
+
+## The Basics
+
+There are two main ways of using holepunching to find and connect with peers: Hyperdht and Hyperswarm. While both have use cases they are better suited towards, Hyperswarm abstracts away some of the complexities of Hyperdht. Let's dig into both.
+
+
 ## What is HyperDHT?
 
 HyperDHT is a distributed hash table (DHT) that powers Hyperswarm and is built on top of dht-rpc. It serves as a peer-to-peer networking layer designed to facilitate finding and connecting to peers using end-to-end encrypted connections. The key innovation is that peers are identified by public keys rather than IP addresses, allowing connections regardless of network location or when peers move between networks.
