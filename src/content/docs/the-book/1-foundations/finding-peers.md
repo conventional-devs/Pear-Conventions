@@ -309,3 +309,13 @@ console.log('Underlying DHT:', swarm.dht)
 5. **IoT Networks**: Devices join topics to discover and communicate with related devices
 
 Hyperswarm essentially provides a simple, robust way to build peer-to-peer applications without worrying about the underlying networking complexities, making distributed application development much more accessible. While there are many use cases for both Hyperswarm and Hyperdht, which one is right for your app use case will vary. That being said, more often than not Hyperswarm provides simplicity and robustness needed for most use cases.
+
+
+
+
+## TLDR: Finding Peers with HyperDHT and Hyperswarm
+
+- **HyperDHT**: Decentralized networking layer using public keys for peer identification, UDP holepunching for NAT traversal, and end-to-end encrypted Noise streams for secure connections.
+- **Hyperswarm**: High-level P2P library simplifying peer discovery and connection via topics (32-byte identifiers), with automatic reconnection and UDX transport for efficient, encrypted communication.
+- **Key Features**: Both support location-independent peer connections, topic-based discovery, and firewall traversal; Hyperswarm offers a simpler API for common use cases like chat, file sharing, and gaming.
+- **Usage**: HyperDHT for fine-grained control (e.g., direct peer connections, mutable storage); Hyperswarm for easier setup in distributed apps with automatic connection management.
